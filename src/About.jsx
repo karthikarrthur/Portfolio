@@ -27,6 +27,7 @@ export default function About() {
   return (
     <section id="about" className="min-h-screen bg-white py-24 px-6 text-center">
       <div className="max-w-6xl mx-auto space-y-20">
+        
         {/* Heading */}
         <motion.h2
           className="text-4xl font-extrabold text-gray-800"
@@ -47,12 +48,12 @@ export default function About() {
           viewport={{ once: true }}
         >
           <p>
-            I’m a passionate web developer focused on creating elegant, functional web
-            experiences. With a specialization in Front-End using React.js, I ensure designs are
-            responsive, intuitive, and fast.
+            I’m a passionate web developer focused on creating elegant, functional web experiences.
+            With a specialization in Front-End using React.js, I ensure designs are responsive,
+            intuitive, and fast.
           </p>
           <p>
-            Beyond the UI, I have a working knowledge of MongoDB, SQL, Node.js, and Express.js — 
+            Beyond the UI, I have a working knowledge of MongoDB, SQL, Node.js, and Express.js —
             enabling me to contribute effectively to full-stack applications and scalable solutions.
           </p>
           <p>
@@ -82,28 +83,42 @@ export default function About() {
 
         {/* Buttons */}
         <motion.div
-          className="flex justify-center gap-6 pt-6"
+          className="flex flex-col sm:flex-row justify-center gap-6 pt-6"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
           viewport={{ once: true }}
         >
+          {/* Contact Button */}
           <a
             href="#contact"
             className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-full shadow-md transition"
           >
             Get In Touch
           </a>
-          <a
-            href="/Karthik_R_Resume.pdf"
-            download
-            className="border border-purple-600 text-purple-600 hover:bg-purple-50 font-semibold py-3 px-8 rounded-full transition"
-          >
-            Download CV
-          </a>
+
+       {/* View Resume */}
+<motion.a
+  href="/resume.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="border border-purple-600 text-purple-600 hover:bg-purple-50 font-semibold py-3 px-8 rounded-full transition"
+>
+  View Resume
+</motion.a>
+
+{/* Download Resume */}
+<motion.a
+  href="/resume.pdf"
+  download="Karthik-R-Full-Stack-Developer.pdf"
+  className="border border-purple-600 text-purple-600 hover:bg-purple-50 font-semibold py-3 px-8 rounded-full transition"
+>
+  Download Resume
+</motion.a>
+
         </motion.div>
 
-        {/* Scroll Down Arrow - now below everything */}
+        {/* Scroll Down Arrow */}
         <motion.div
           className="mt-32 flex flex-col items-center animate-bounce"
           initial={{ opacity: 0 }}
@@ -117,7 +132,6 @@ export default function About() {
             stroke="currentColor"
             strokeWidth="2"
             viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7"></path>
           </svg>
